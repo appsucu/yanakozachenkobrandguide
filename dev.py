@@ -20,7 +20,7 @@ import time
 import urllib.parse
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parent / "dist"
+ROOT_DIR = Path(__file__).resolve().parent
 LIVERELOAD_ENDPOINT = "/__livereload"
 
 LIVERELOAD_SCRIPT = """
@@ -126,9 +126,10 @@ class ClientHub:
 
 
 def scan_files(directory: Path) -> dict[str, tuple[int, int]]:
-    """Повертає словник {відносний_шлях: (mtime_ns, size)} для всіх файлів у dist/."""
+    """Повертає словник {відносний_шлях: (mtime_ns, size)} для всіх файлів у проєкті."""
     snapshot: dict[str, tuple[int, int]] = {}
-    for root, _, files in os.walk(directory):
+    for root, dirs, files in os.walk(directory):
+        dirs[:] = [d for d in dirs if not d.startswith(".") and d != "__pycache__"]
         for name in files:
             full_path = Path(root) / name
             try:
