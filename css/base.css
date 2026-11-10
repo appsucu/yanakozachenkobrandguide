@@ -121,6 +121,14 @@ section {
   margin: 0 0 20px;
 }
 
+.inline-accent {
+  height: 1.25em;
+  width: auto;
+  vertical-align: -0.22em;
+  margin: 0 4px;
+  display: inline-block;
+}
+
 h1,
 h2,
 h3,
