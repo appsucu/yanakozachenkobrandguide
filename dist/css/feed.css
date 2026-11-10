@@ -1,0 +1,152 @@
+/* ==========================================================================
+   05 / Стрічка Instagram 3 × 3 (#feed)
+   ========================================================================== */
+
+.feed-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.feed-tile {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  position: relative;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feed-tile.photo {
+  padding: 0;
+  background: #171717;
+}
+
+.feed-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feed-tile strong {
+  font: clamp(17px, 2.1vw, 31px)/.98 Cormorant;
+  position: relative;
+  z-index: 2;
+}
+
+.feed-tile .tile-graphic {
+  position: absolute;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.feed-tile .tile-stress {
+  right: 16px;
+  bottom: 14px;
+  height: 44%;
+}
+
+.feed-tile .tile-yk {
+  right: 8px;
+  bottom: 8px;
+  height: 44%;
+}
+
+.feed-tile .tile-steps {
+  right: 14px;
+  bottom: 14px;
+  height: 40%;
+}
+
+.tile-tag {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 600 12px/1 Manrope, sans-serif;
+  color: #171717;
+  z-index: 2;
+}
+
+.tile-tag i {
+  width: 5px;
+  height: 13px;
+  background: #171717;
+  transform: skew(-24deg);
+  display: inline-block;
+}
+
+.tile-tag.light {
+  color: #f4efe5;
+}
+
+.tile-tag.light i {
+  background: #f4c900;
+}
+
+.feed-tile small {
+  font-size: 6px;
+  margin-top: 14px;
+}
+
+.cyan {
+  background: #4fc3d6;
+  color: #13304e;
+}
+
+.cream {
+  background: #e9dfcb;
+}
+
+.dark {
+  background: #171717;
+  color: #f4efe5;
+}
+
+.yellow {
+  background: #f4c900;
+}
+
+.yk {
+  font: 85px Cormorant;
+  letter-spacing: -12px;
+}
+
+.slashes {
+  font: bold 60px Manrope;
+  color: #f4c900;
+  line-height: 1;
+}
+
+.feed-notes > h3 {
+  font: 42px/1.05 Cormorant;
+}
+
+.feed-notes ol {
+  padding-left: 23px;
+}
+
+.feed-notes li {
+  padding: 14px 0 14px 15px;
+  font-size: 16px;
+}
+
+.feed-notes li p {
+  color: #3d3a34;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+

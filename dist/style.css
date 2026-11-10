@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Головний файл стилів (підключає модулі з папки css/)
+   ========================================================================== */
+
+@import url('css/base.css');
+@import url('css/hero.css');
+@import url('css/studio.css');
+@import url('css/palette.css');
+@import url('css/typography.css');
+@import url('css/elements.css');
+@import url('css/feed.css');
+@import url('css/rules.css');
+@import url('css/responsive.css');

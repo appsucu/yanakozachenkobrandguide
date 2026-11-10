@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4EFE5">
+  <title>Yana Kozachenko — Visual guide</title>
+  <meta name="description"
+    content="Візуальний гайд Яни Козаченко: палітра, типографіка та інтерактивні макети Instagram.">
+
+  <!-- Модульні таблиці стилів (також об'єднані через style.css) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/studio.css">
+  <link rel="stylesheet" href="css/palette.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/feed.css">
+  <link rel="stylesheet" href="css/rules.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ====================================================================
+       ШАПКА САЙТУ (Header)
+       ==================================================================== -->
+  <header>
+    <a class="logo" href="#">
+      <img class="logo-mark" src="assets/brands/YK%20black_Logo.svg" alt="YK">
+      <span>YANA KOZACHENKO</span>
+    </a>
+    <span class="edition">VISUAL GUIDE / 2026</span>
+    <a href="#studio" class="header-link">Спробувати кольори ↗</a>
+  </header>
+
+  <main>
+
+    <!-- ====================================================================
+         ГОЛОВНИЙ ЕКРАН (Hero — #guide)
+         ==================================================================== -->
+    <section class="hero" id="guide">
+      <div class="hero-copy">
+        <p class="eyebrow">ОСОБИСТИЙ БРЕНД · SOCIAL MEDIA GUIDE</p>
+        <h1>YANA<br>KOZACHENKO<span class="yellow-dot">.</span></h1>
+        <p class="role">English trainer & founder of <b>Ever English</b></p>
+        <div class="hero-bottom">
+          <h2>Instagram як журнал<br>про мову й <em>можливості.</em></h2>
+          <p>Впізнаваний характер. Чіткі ідеї.<br>Впевнена англійська.</p>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <img src="assets/brands/heder.png" alt="Портрет Яни з брендгайду">
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         НАВІГАЦІЯ ПО РОЗДІЛАХ
+         ==================================================================== -->
+    <nav class="section-nav" aria-label="Розділи гайду">
+      <a href="#studio">01 Кольори в дії</a>
+      <a href="#palette">02 Палітра</a>
+      <a href="#type">03 Типографіка</a>
+      <a href="#elements">04 Елементи</a>
+      <a href="#feed">05 Instagram</a>
+      <a href="#rules">06 Правила</a>
+    </nav>
+
+    <!-- ====================================================================
+         01 / ІНТЕРАКТИВНА МАЙСТЕРНЯ (#studio)
+         Кольорові пресети налаштовуються у файлі: dist/js/data.js
+         Логіка роботи прев'ю знаходиться у файлі: dist/js/studio.js
+         ==================================================================== -->
+    <section id="studio">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / ІНТЕРАКТИВНА МАЙСТЕРНЯ</p>
+          <h2>Знайди своє <em>поєднання.</em></h2>
+        </div>
+        <p>Змінюй кольори та одразу дивись,<br>як вони працюють у дописі чи сторіз.</p>
+      </div>
+
+      <div class="studio">
+        <div class="preview-area">
+          <div class="format-tabs" role="group" aria-label="Формат">
+            <button class="active" data-format="post">Допис 4:5</button>
+            <button data-format="story">Сторіз 9:16</button>
+          </div>
+
+          <article class="preview" id="preview">
+            <div class="preview-top">EVERENGLISH <span>↗</span></div>
+            <div class="preview-content">
+              <p class="sample-label">МОВА, ЩО ВІДКРИВАЄ МОЖЛИВОСТІ</p>
+              <h3 id="sample-title">Англійська<br>вашого<br><em>масштабу.</em></h3>
+              <p id="sample-body">Для тих, хто формує рішення,<br>команди та зміни.</p>
+            </div>
+            <svg class="steps" viewBox="0 0 359 291" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M132.269 125.495L79.1323 125.495L0 290.258H56.1953L132.269 125.495Z" />
+              <path d="M243.175 64.1514L190.038 64.1514L110.906 228.915H167.101L243.175 64.1514Z" />
+              <path d="M358.727 0L305.59 0L226.458 164.763H282.653L358.727 0Z" />
+            </svg>
+            <div class="preview-bottom">
+              <span>YANA KOZACHENKO</span>
+              <span>01 — 03</span>
+            </div>
+          </article>
+
+          <p class="preview-note">Живе прев’ю · демонстраційний макет</p>
+        </div>
+
+        <div class="controls">
+          <p class="eyebrow">КОЛЬОРОВИЙ СЦЕНАРІЙ</p>
+          <div class="presets" id="presets"></div>
+          <div id="color-controls"></div>
+          <div class="contrast">
+            <span>Контраст тексту</span>
+            <b id="contrast-value"></b>
+          </div>
+          <p id="contrast-note" class="muted"></p>
+          <div class="control-actions">
+            <button id="reset">↺ Скинути</button>
+            <button id="copy">Копіювати палітру ↗</button>
+          </div>
+          <p class="muted">Твоє поєднання зберігається в цьому браузері. Основна палітра бренду залишається нижче.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02 / ПАЛІТРА БРЕНДУ (#palette)
+         Список кольорів та їх описи знаходяться у файлі: dist/js/data.js
+         ==================================================================== -->
+    <section id="palette">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / BRAND COLORS</p>
+          <h2>Тепла основа.<br><em>Сміливий акцент.</em></h2>
+        </div>
+        <p>Натисни на колір, щоб скопіювати HEX.</p>
+      </div>
+
+      <div class="palette-grid" id="palette-grid"></div>
+
+    </section>
+
+    <!-- ====================================================================
+         03 / ТИПОГРАФІКА (#type)
+         ==================================================================== -->
+    <section id="type">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / TYPOGRAPHY</p>
+          <h2>Три голоси.<br><em>Один характер.</em></h2>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <span class="type-index">01 / ЗАГОЛОВКИ</span>
+        <div>
+          <h3 class="serif">Cormorant Garamond</h3>
+          <p class="serif specimen">Мова твоїх можливостей.</p>
+        </div>
+        <div>
+          <p>Ім’я, редакційні заголовки та курсивні акценти. Орієнтир у гайді: 54 / 64.</p>
+          <a href="assets/cormorant.ttf" download>Завантажити шрифт ↗</a>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <span class="type-index">02 / ПОЯСНЕННЯ</span>
+        <div>
+          <h3>Manrope</h3>
+          <p class="specimen sans">Clear ideas.<br>Confident English.</p>
+        </div>
+        <div>
+          <p>Пояснення, підписи та навігація. Заголовок 48 / 58, підпис 16 / 19.</p>
+          <a href="assets/manrope.ttf" download>Завантажити шрифт ↗</a>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <span class="type-index">03 / ОСОБИСТИЙ АКЦЕНТ</span>
+        <div>
+          <h3 class="caveat">Caveat</h3>
+          <p class="caveat specimen">Англійська працює на твої цілі <img class="inline-heart"
+              src="assets/brands/Heart%F0%9F%92%97.svg" alt="♡"></p>
+        </div>
+        <div>
+          <p>Короткі рукописні фрази та підписи. Робоча вага Medium 500.</p>
+          <a href="assets/caveat.ttf" download>Завантажити шрифт ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04 / ГРАФІЧНІ ЕЛЕМЕНТИ ТА HIGHLIGHTS (#elements)
+         Іконки Highlights налаштовуються у файлі: dist/js/data.js
+         ==================================================================== -->
+    <section id="elements">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / GRAPHIC LANGUAGE</p>
+          <h2>Маленькі знаки.<br><em>Велика впізнаваність.</em></h2>
+        </div>
+        <p>Один головний прийом у макеті:<br>монограма або похилі штрихи.</p>
+      </div>
+
+      <div class="element-grid">
+        <article>
+          <div class="symbol monogram">
+            <img src="assets/brands/YK%20black_Logo.svg" alt="Монограма YK">
+          </div>
+          <h3>Монограма YK</h3>
+          <p>Масштабуй, зміщуй та обрізай краєм кадру. Лише латинські YK.</p>
+        </article>
+
+        <article>
+          <div class="symbol">
+            <img src="assets/brands/STRESS%20ACCENT.svg" alt="Pronunciation / stress">
+          </div>
+          <h3>Pronunciation / stress</h3>
+          <p>Похилий штрих із коротким верхнім елементом. Виразний акцент.</p>
+        </article>
+
+        <article>
+          <div class="symbol">
+            <img src="assets/brands/GROWTH%20STEPS.svg" alt="Vocabulary growth">
+          </div>
+          <h3>Vocabulary growth</h3>
+          <p>Висхідні штрихи: розвиток, результати та перехід між рівнями.</p>
+        </article>
+      </div>
+
+      <div class="highlight-heading">
+        <h3>Highlights</h3>
+        <span>Ескізи за напрямами Notion · назви потребують фінального погодження</span>
+      </div>
+      <div class="highlights" id="highlights"></div>
+    </section>
+
+    <!-- ====================================================================
+         05 / СТРІЧКА INSTAGRAM 3 × 3 (#feed)
+         ==================================================================== -->
+    <section id="feed">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">05 / INSTAGRAM COMPOSITION</p>
+          <h2>Думай постом.<br><em>Дивись на всю стрічку.</em></h2>
+        </div>
+        <p>Фото, кольорова площина, фото.<br>Ритм, який тримає історію разом.</p>
+      </div>
+
+      <div class="feed-layout">
+        <!-- Сітка 3 × 3 (шаховий ритм без повторів кольорів та людей підряд) -->
+        <div class="feed-grid">
+          <!-- Ряд 1: Природне фото — Бірюзова площина — Фото на кремовому фоні -->
+          <div class="feed-tile photo">
+            <img src="assets/brands/1.png" alt="Портрет біля річки: Краща версія тебе вже говорить англійською"
+              loading="lazy">
+          </div>
+          <div class="feed-tile cyan">
+            <strong>Англійська<br>вашого<br><em>масштабу.</em></strong>
+            <img class="tile-graphic tile-stress" src="assets/brands/STRESS%20ACCENT.svg" alt="">
+            <span class="tile-tag"><i></i>Promo</span>
+          </div>
+          <div class="feed-tile photo">
+            <img src="assets/brands/8.png" alt="Макет на світлому фоні: Англійська починається з тебе" loading="lazy">
+          </div>
+
+          <!-- Ряд 2: Кремова пауза з монограмою — Вуличне фото — Темна площина -->
+          <div class="feed-tile photo cream">
+            <img src="assets/brands/Instagram%20post%20-%207.png"
+              alt="Пауза між акцентами: кремова площина та монограма YK — EverEnglish" loading="lazy">
+          </div>
+          <div class="feed-tile photo">
+            <img src="assets/brands/2.png"
+              alt="Портрет біля цегляної будівлі: Краща версія тебе вже говорить англійською" loading="lazy">
+          </div>
+          <div class="feed-tile dark">
+            <strong>Bold mentor.<br>Clear ideas.<br><em>Confident<br>English.</em></strong>
+            <img class="tile-graphic tile-yk" src="assets/brands/YK%20light.svg" alt="">
+            <span class="tile-tag light"><i></i>About</span>
+          </div>
+
+          <!-- Ряд 3: Динамічне фото — Жовта площина — Макет EverEnglish -->
+          <div class="feed-tile photo">
+            <img src="assets/brands/4.png" alt="Динамічний портрет: Краща версія тебе вже говорить англійською"
+              loading="lazy">
+          </div>
+          <div class="feed-tile yellow">
+            <strong>Мова<br>твоїх<br><em>можливостей.</em></strong>
+            <svg class="tile-graphic tile-steps" viewBox="0 0 359 291" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M132.269 125.495L79.1323 125.495L0 290.258H56.1953L132.269 125.495Z" fill="#4FC3D6" />
+              <path d="M243.175 64.1514L190.038 64.1514L110.906 228.915H167.101L243.175 64.1514Z" fill="#171717" />
+              <path d="M358.727 0L305.59 0L226.458 164.763H282.653L358.727 0Z" fill="#F4EFE5" />
+            </svg>
+            <span class="tile-tag"><i></i>Courses</span>
+          </div>
+          <div class="feed-tile photo">
+            <img src="assets/brands/17.png" alt="EverEnglish: Англійська, що відповідає масштабу вашої експертизи"
+              loading="lazy">
+          </div>
+        </div>
+
+        <!-- Пояснення до сітки Instagram -->
+        <div class="feed-notes">
+          <h3>Instagram як<br><em>редакційна система.</em></h3>
+          <ol>
+            <li>
+              <b>Одна сильна теза</b>
+              <p>Кольоровий фон, великий заголовок, мінімум зайвого.</p>
+            </li>
+            <li>
+              <b>Людина в центрі</b>
+              <p>Велике фото. Текст не перекриває обличчя.</p>
+            </li>
+            <li>
+              <b>Пауза між акцентами</b>
+              <p>Кремова площина та монограма дають стрічці повітря.</p>
+            </li>
+          </ol>
+          <p class="muted">Демонстраційна сітка 3 × 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06 / ПРАВИЛА ПЕРЕД ПУБЛІКАЦІЄЮ (#rules)
+         ==================================================================== -->
+    <section id="rules">
+      <p class="eyebrow">06 / ПЕРЕД ПУБЛІКАЦІЄЮ</p>
+      <h2>Перевір на <em>телефоні.</em></h2>
+      <div class="rules">
+        <p><span>01</span>Одна головна теза на макет.</p>
+        <p><span>02</span>Заголовок читається у зменшеному прев’ю.</p>
+        <p><span>03</span>Текст не перекриває обличчя.</p>
+        <p><span>04</span>Один прийом: монограма або штрихи.</p>
+        <p><span>05</span>Кольори з палітри, достатній контраст.</p>
+        <p><span>06</span>Перевірено ритм сусідніх публікацій.</p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ПІДВАЛ САЙТУ (Footer)
+         ==================================================================== -->
+    <footer>
+      <div class="footer-brand">
+        YANA KOZACHENKO
+        <span>English trainer & founder of Ever English</span>
+      </div>
+      <div>
+        <a href="https://app.notion.com/p/ruslanprojects/guidebook-3d44ecbdc73380538738c1c4a586599a?source=copy_link"
+          target="_blank" rel="noopener">Гайд у Notion ↗</a>
+        <a href="assets/brandboard.png" target="_blank">Оригінальний борд PDF ↗</a>
+        <span>Візуальний гайд · 2026</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Спливаюче повідомлення (Toast) -->
+  <div id="toast" role="status"></div>
+
+  <!-- Скрипти -->
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/studio.js"></script>
+  <script src="js/render.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

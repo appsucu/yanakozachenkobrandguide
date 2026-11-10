@@ -1,0 +1,46 @@
+/* ==========================================================================
+   02 / Палітра кольорів (#palette)
+   ========================================================================== */
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.palette-card {
+  border: 0;
+  text-align: left;
+  background: none;
+  padding: 0;
+  color: #171717;
+}
+
+.color-block {
+  height: 160px;
+  padding: 18px;
+  display: flex;
+  align-items: end;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px #1717171a;
+}
+
+.palette-card strong {
+  display: block;
+  font-size: 16px;
+  margin: 14px 0 6px;
+}
+
+.palette-card p {
+  font-size: 14px;
+  line-height: 1.45;
+  padding-right: 15px;
+  color: #3d3a34;
+}
+
+.source-note {
+  font-size: 14px;
+  color: #4a463f;
+  margin: 22px 0 0;
+}
+

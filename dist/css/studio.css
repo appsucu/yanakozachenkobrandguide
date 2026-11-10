@@ -1,0 +1,264 @@
+/* ==========================================================================
+   01 / Інтерактивна майстерня кольорів (#studio)
+   ========================================================================== */
+
+.studio {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  border: 1px solid #cfcac1;
+}
+
+.preview-area {
+  background: #e7e2d8;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.format-tabs {
+  display: flex;
+  border: 1px solid #c4bfb6;
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 25px;
+}
+
+.format-tabs button {
+  background: none;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.format-tabs button.active {
+  background: #171717;
+  color: white;
+}
+
+.preview {
+  --bg: #4fc3d6;
+  --fg: #13304e;
+  --accent: #f4c900;
+  width: 100%;
+  max-width: 345px;
+  aspect-ratio: 4/5;
+  background: var(--bg);
+  color: var(--fg);
+  position: relative;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 12px 28px #1717170f;
+}
+
+.preview.story {
+  aspect-ratio: 9/16;
+  max-width: 300px;
+}
+
+.preview-top,
+.preview-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.preview-top span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.preview-content {
+  margin-top: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.sample-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.preview h3 {
+  font: 46px/.95 Cormorant;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.preview-content > p:last-child {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.preview-bottom {
+  margin-top: auto;
+  z-index: 1;
+  font-size: 11px;
+}
+
+.steps {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps i {
+  display: block;
+  width: 22px;
+  height: 70px;
+  background: #4fc3d6;
+  transform: skew(-25deg) translateY(18px);
+}
+
+.steps i:nth-child(2) {
+  background: #171717;
+  transform: skew(-25deg);
+}
+
+.steps i:nth-child(3) {
+  background: #f4c900;
+  transform: skew(-25deg) translateY(-18px);
+}
+
+.preview > .steps {
+  position: absolute;
+  right: 36px;
+  bottom: 58px;
+  width: 135px;
+  height: auto;
+}
+
+.preview > .steps path:nth-child(1) {
+  fill: var(--accent);
+}
+
+.preview > .steps path:nth-child(2) {
+  fill: var(--fg);
+}
+
+.preview > .steps path:nth-child(3) {
+  fill: var(--fg);
+  opacity: 0.4;
+}
+
+.preview-note {
+  font-size: 13px;
+  color: #4a463f;
+  margin: 20px 0 0;
+}
+
+.controls {
+  padding: 40px;
+}
+
+.presets {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.presets button {
+  border: 1px solid #b5afa3;
+  background: transparent;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.presets button.active {
+  background: #171717;
+  color: #f4efe5;
+}
+
+.color-row {
+  padding: 16px 0;
+  border-top: 1px solid #d6d0c5;
+}
+
+.color-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.color-title label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.custom-color {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.custom-color input {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.swatches {
+  display: flex;
+  gap: 10px;
+}
+
+.swatches button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0002;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.swatches button.selected {
+  outline: 1px solid #171717;
+  outline-offset: 3px;
+}
+
+.contrast {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d6d0c5;
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.control-actions {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.control-actions button {
+  padding: 13px 16px;
+  border: 1px solid #b5afa3;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.control-actions button:last-child {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+}
+

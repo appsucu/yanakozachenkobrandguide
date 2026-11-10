@@ -1,0 +1,26 @@
+/* ==========================================================================
+   06 / Правила перед публікацією (#rules)
+   ========================================================================== */
+
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 50px;
+  margin-top: 35px;
+}
+
+.rules p {
+  padding: 22px 0;
+  border-top: 1px solid #ccc7be;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.rules span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #575249;
+  margin-right: 20px;
+}
+

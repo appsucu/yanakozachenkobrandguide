@@ -1,0 +1,63 @@
+/* ==========================================================================
+   03 / Типографіка (#type)
+   ========================================================================== */
+
+.type-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 30px;
+  padding: 32px 0;
+  border-top: 1px solid #ccc7be;
+}
+
+.type-index {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.type-row h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.serif {
+  font-family: Cormorant, Georgia, serif;
+}
+
+.specimen {
+  font-size: 40px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.sans {
+  font-size: 28px;
+}
+
+.type-row > div:last-child {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3d3a34;
+}
+
+.type-row a {
+  display: inline-block;
+  border-bottom: 1px solid #69645b;
+  padding-bottom: 4px;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #171717;
+}
+
+.caveat {
+  font-family: Caveat, cursive;
+}
+
+.inline-heart {
+  height: 0.9em;
+  width: auto;
+  vertical-align: -0.1em;
+  display: inline-block;
+}
+
