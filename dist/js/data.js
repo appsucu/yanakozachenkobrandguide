@@ -33,8 +33,8 @@ const colorControlLabels = ['Фон', 'Текст', 'Графічний акце
 
 /**
  * Іконки для Instagram Highlights (Розділ 04 — #elements)
- * Координати viewBox кожного кружечка взяті з файлу assets/brands/HIGLIHTS COVERS.svg
- * Формат: [Англійська назва, Український підпис, viewBox у HIGLIHTS COVERS.svg]
+ * Координати viewBox кожного кружечка взяті з файлу assets/brands/highlights-covers.svg
+ * Формат: [Англійська назва, Український підпис, viewBox у highlights-covers.svg]
  */
 const icons = [
   ['About', 'Про Яну', '90.1345,54.3369,124.326,124.326'],

@@ -32,7 +32,7 @@ function renderHighlights() {
     const el = document.createElement('div');
     el.className = 'highlight';
     el.innerHTML = `
-      <img src="assets/brands/HIGLIHTS%20COVERS.svg#svgView(viewBox(${viewBox}))" alt="${ukLabel}">
+      <img src="assets/brands/highlights-covers.svg#svgView(viewBox(${viewBox}))" alt="${ukLabel}">
       <p>${name}</p>
       <small>${ukLabel}</small>
     `;
