@@ -172,8 +172,14 @@
   }
 
   .section-heading > p {
-    margin-top: 16px;
+    margin-top: 18px;
     font-size: 15px;
+    padding-left: 32px;
+  }
+
+  .section-heading > p::before {
+    width: 20px;
+    height: 29px;
   }
 
   .eyebrow {

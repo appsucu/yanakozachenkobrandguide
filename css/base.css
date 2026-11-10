@@ -188,10 +188,23 @@ h3 {
 }
 
 .section-heading > p {
+  position: relative;
   font-size: 16px;
   line-height: 1.5;
   color: #3d3a34;
   margin: 0;
+  padding-left: 36px;
+}
+
+.section-heading > p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 34px;
+  background: url('../assets/brands/stress-accent.svg') no-repeat center / contain;
 }
 
 .muted {
@@ -205,9 +218,10 @@ h3 {
    ========================================================================== */
 
 footer {
+  width: 100%;
   background: #171717;
   color: #f4efe5;
-  padding: 45px 5%;
+  padding: 45px max(5%, calc((100% - 1440px) / 2));
   display: flex;
   justify-content: space-between;
   gap: 30px;
